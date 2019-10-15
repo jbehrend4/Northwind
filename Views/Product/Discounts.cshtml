@@ -1,0 +1,52 @@
+﻿@using Northwind.Models
+@model IEnumerable<Northwind.Models.Discount>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscountID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscountPercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Discount discount in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => discount.DiscountID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => discount.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => discount.EndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => discount.DiscountPercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => discount.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => discount.Description)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
