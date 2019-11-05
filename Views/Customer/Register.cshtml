@@ -1,0 +1,60 @@
+﻿@using Northwind.Models
+@model Customers
+
+@{
+    ViewData["Title"] = "Register";
+}
+<br />
+<h2><i class="far fa-address-card"></i> Customer Register</h2>
+
+<form method="post" asp-action="Register">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" placeholder="example@email.com" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" class="form-control" placeholder="Password" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="CompanyName">Company Name</label>
+            <input asp-for="CompanyName" class="form-control" placeholder="Company" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Address">Address</label>
+            <input asp-for="Address" class="form-control" placeholder="123 Example Street" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label asp-for="City">City</label>
+            <input asp-for="City" class="form-control" placeholder="New York City" />
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="Region">Region</label>
+            <input asp-for="Region" class="form-control" placeholder="New York" />
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="PostalCode">Postal Code</label>
+            <input asp-for="PostalCode" class="form-control" placeholder="11111" />
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="Country">Country</label>
+            <input asp-for="Country" class="form-control" placeholder="United States" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Phone">Phone</label>
+            <input asp-for="Phone" class="form-control" placeholder="555-555-1312" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Fax">Fax</label>
+            <input asp-for="Fax" class="form-control" placeholder="555-555-9798" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-outline-success">Register</button>
+</form>
